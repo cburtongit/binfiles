@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Setup syncronization all submodule wit upstream
+# 
+# Usage:
+#    git-sub-upstream
+#
+
+git submodule -q foreach git pull -q origin master
