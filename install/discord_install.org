@@ -1,0 +1,41 @@
+* TODO Convert to scripts
+
+# Update discord in
+# Download the .tar.gz file and rename it to something generic:
+wget -O ~/Downloads/discord-linux.tar.gz "https://discordapp.com/api/download?platform=linux&format=tar.gz"
+
+# Extract the files to your Downloads directory:
+tar -xzvf ~/Downloads/discord-linux.tar.gz -C ~/Downloads/
+
+# Move the installation files to /usr/share/discord/:
+sudo mv ~/Downloads/Discord/ /opt/discord/
+
+# Create a symbolic link for the .desktop entry to /usr/share/applications/:
+sudo ln -s /opt/discord/discord.desktop /usr/share/applications/
+
+# Create a symbolic link for the icon file to /usr/share/icons/:
+sudo ln -s /opt/discord/discord.png /usr/share/icons/
+
+# Create a symbolic link for the executable file to /usr/bin/:
+sudo ln -s /opt/discord/Discord /usr/bin/discord
+
+# Delete the .tar.gz file from your Downloads directory:
+rm ~/Downloads/discord-linux.tar.gz
+
+ # Update discord
+# Delete the installation files:
+sudo rm -r /usr/share/discord/
+
+# Download the .tar.gz file and rename it to something generic:
+wget -O ~/Downloads/discord-linux.tar.gz "https://discordapp.com/api/download?platform=linux&format=tar.gz"
+
+# Extract the files to your Downloads directory:
+tar -xzvf ~/Downloads/discord-linux.tar.gz -C ~/Downloads/
+
+# Move the installation files to /usr/share/discord/:
+sudo mv ~/Downloads/Discord/ /usr/share/discord/
+
+# Delete the .tar.gz file from your Downloads directory:
+rm ~/Downloads/discord-linux.tar.gz
+
+#You're now up to date!
