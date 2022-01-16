@@ -3,12 +3,12 @@
 import sys
 import string
 # import Image
-import StringIO
+from io import StringIO
 import pynotify
 from mutagen import File
  
 d = dict(zip(sys.argv[1::2], sys.argv[2::2]))
-d['status'] = string.capitalize(d['status'])
+d['status'] = str.capitalize(d['status'])
  
 # file = File(d['file'])
 # artwork = StringIO.StringIO(file.tags['APIC:folder.jpg'].data)
